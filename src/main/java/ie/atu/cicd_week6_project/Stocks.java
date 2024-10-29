@@ -1,4 +1,4 @@
-package ie.atu.cicd_week6_project.Entities;
+package ie.atu.cicd_week6_project;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
