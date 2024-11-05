@@ -10,14 +10,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/user")
 public class UserController {
-    private UserService userService;
+    private final UserService userService;
 
     public UserController(UserService userService) {
         this.userService = userService;
     }
 
     @PostMapping("/signUp")
-    public List<Users> newUser(@RequestBody Users users) {
-        return userService.addUser(users);
+    public List<User> newUser(@RequestBody User user) {
+        return userService.addUser(user);
     }
 }
