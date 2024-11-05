@@ -26,3 +26,27 @@ public class StockService {
         return myStockList;
     }
 }
+
+/*
+        String DeleteSQL = "DELETE FROM User userservice WHERE userservice.UserId='"+userservice.getId()+"'";
+
+
+               try {
+
+                   // Insert a new record into the "users" table
+                   PreparedStatement stmt = conn.prepareStatement("INSERT INTO User (UserId, UserName, UserEmail, UserPassword, UserBank, UserPortfolioValue) VALUES (?,?,?,?,?,?)");
+                   stmt.setString(1, user.getUserId());
+                   stmt.setString(2, user.getUserName());
+                   stmt.setString(3, user.getUserEmail());
+                   stmt.setInt(4, user.getUserPassword());
+                   stmt.setString(5, user.getUserBank());
+                   stmt.setInt(6, user.getUserPortfolioValue());
+                   stmt.executeUpdate();
+
+                   System.out.println("Insert completed successfully.");
+               } catch (SQLException ex) {
+
+                   System.out.println("Record insert failed.");
+                   ex.printStackTrace();
+               }
+ */
