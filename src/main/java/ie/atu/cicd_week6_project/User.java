@@ -17,5 +17,6 @@ public class User {
     private String password;
     @NotBlank(message = "Please enter bank details")
     private String bankDetails;
+    //Should users be able to access?
     private float stockValue;
 }
