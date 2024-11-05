@@ -1,9 +1,6 @@
 package ie.atu.cicd_week6_project;
 
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,5 +16,15 @@ public class UserController {
     @PostMapping("/signUp")
     public List<User> newUser(@RequestBody User user) {
         return userService.addUser(user);
+    }
+
+    @DeleteMapping("/{id}")
+    public List<User> delUser(@PathVariable int id){
+        return userService.removeUser(id);
+    }
+
+    @PutMapping("/editProfile/{id}")
+    public List<User> changeUser(@RequestBody User user, @PathVariable int id){
+        return userService.editUser(user, id);
     }
 }
